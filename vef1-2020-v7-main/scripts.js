@@ -5,7 +5,7 @@
 const LETTERS = 'AÁBDÐEÉFGHIÍJKLMNOÓPRSTUÚVXYÝÞÆÖ ';
 
 /**
- * Byrja forrit.
+ *  Byrja forrit.
  */
 function start() {
   
@@ -21,7 +21,8 @@ function start() {
        }
 
       if(heiltala>1 || heiltala<31){
-      const strengur = prompt('Gefðu upp strenginn sem á að kóða/afkóða með hliðrun');
+        const inntaksStrengur=prompt('Gefðu upp strenginn sem á að kóða/afkóða með hliðrun');
+        const strengur=inntaksStrengur.toLocaleUpperCase();
 
         if(strengur===''){
           alert('Þú gafst ekki upp streng, reyndu aftur');
@@ -36,7 +37,7 @@ function start() {
           }
         }
         if(nonoStafir!==''){
-          alert(`Þú gafst upp stafi sem ekki er hægt að kóða: ${nonoStafir}. Stafirnir þurfa að vera hástafir. Reyndu aftur.`);
+          alert(`Þú gafst upp stafi sem ekki er hægt að kóða: ${nonoStafir}. Reyndu aftur.`);
           start();
         }
         else if(kodaEdaAfkoda==='kóða'){
